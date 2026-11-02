@@ -1,3 +1,6 @@
+# https://github.com/Corion82/lab11-MG-BH
+# Partner 1: Matthew Gardstein
+# Partner 2: Brent Hiser
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -5,27 +8,32 @@ calculator.py
 One function per operation, in order.
 """
 
+import math
 
 # ADDING
 def add(a, b):
-    return a + b  # returns the sum of a and b
+    return a + b
 
 # SUBTRACTING
 def subtract(a, b):
-    return a - b  # returns the difference of a and b
+    return a - b
 
 # MULTIPLYING
 def multiply(a, b):
-    return a * b # returns the product of a and b
+    return a * b
 
 # DIVIDING
 def divide(a, b):
-    return a / b # returns the quotient of a and b
+    if a == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return b / a
 
 # LOGARITHM
-def log(b, a):
-    return log(b, a) # returns log base b of a
+def logarithm(a, b):
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError("Invalid argument for logarithm.")
+    return math.log(b, a)
 
 # EXPONENT
-def exponent(a, power):
-    return a ** power # returns a^power
+def exponent(a, b):
+    return a ** b

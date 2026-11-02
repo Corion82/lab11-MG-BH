@@ -1,3 +1,7 @@
+# https://github.com/Corion82/lab11-MG-BH
+# Partner 1: Matthew Gardstein
+# Partner 2: Brent Hiser
+
 import unittest
 from calculator import *
 
