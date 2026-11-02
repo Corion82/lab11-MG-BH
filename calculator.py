@@ -10,6 +10,16 @@ One function per operation, in order.
 
 import math
 
+# SQUARE ROOT
+def square_root(a):
+    if a < 0:
+        raise ValueError("Cannot calculate square root of a negative number.")
+    return math.sqrt(a)
+
+# HYPOTENUSE
+def hypotenuse(a, b):
+    return math.hypot(a, b)
+
 # ADDING
 def add(a, b):
     return a + b
