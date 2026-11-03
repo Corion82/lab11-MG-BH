@@ -39,12 +39,12 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     div(0, 5)
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(0, 2)
+            calculator.div(0, 2)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(calculator.logarithm(100, 10), 2)
-        self.assertEqual(calculator.logarithm(8, 2), 3)
-        self.assertEqual(calculator.logarithm(125, 5), 3)
+        self.assertEqual(calculator.logarithm(10, 100), 2)
+        self.assertEqual(calculator.logarithm(2, 8), 3)
+        self.assertEqual(calculator.logarithm(5, 125), 3)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
