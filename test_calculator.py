@@ -22,14 +22,14 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self):  # 3 assertions
-        self.assertEqual(calculator.multiply(3, 4), 12)
-        self.assertEqual(calculator.multiply(-2, 5), -10)
-        self.assertEqual(calculator.multiply(0, 5), 0)
+        self.assertEqual(calculator.mul(3, 4), 12)
+        self.assertEqual(calculator.mul(-2, 5), -10)
+        self.assertEqual(calculator.mul(0, 5), 0)
 
     def test_divide(self):  # 3 assertions
-        self.assertEqual(calculator.divide(2, 10), 5.0)
-        self.assertEqual(calculator.divide(4, 20), 5.0)
-        self.assertEqual(calculator.divide(5, 0), 0.0)
+        self.assertEqual(calculator.div(2, 10), 5.0)
+        self.assertEqual(calculator.div(4, 20), 5.0)
+        self.assertEqual(calculator.div(5, 0), 0.0)
 
     # ##########################
 
@@ -44,11 +44,11 @@ class TestCalculator(unittest.TestCase):
     def test_logarithm(self): # 3 assertions
         self.assertEqual(calculator.logarithm(100, 10), 2)
         self.assertEqual(calculator.logarithm(8, 2), 3)
-        self.assertEqual(calculator.logarithm(1e12, 100), 6)
+        self.assertEqual(calculator.logarithm(125, 5), 3)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            calculator.logarithm(-50e20, 5)
+            calculator.logarithm(5, -10)
         # use same technique from test_divide_by_zero
     # ##########################
 
